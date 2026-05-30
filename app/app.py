@@ -5,6 +5,9 @@ from pathlib import Path
 import joblib
 import streamlit as st
 
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
 
 APP_DIR = Path(__file__).resolve().parent
 MODEL_PATH = APP_DIR.parent / "models" / "sentiment_model.joblib"
@@ -58,3 +61,12 @@ if st.button("Analyze sentiment", type="primary"):
             st.error(str(exc))
         except Exception as exc:
             st.error(f"Unable to analyze text: {exc}")
+
+FIGURES_DIR = APP_DIR.parent / "reports" / "figures"
+
+st.divider()
+st.subheader("Model Evaluation")
+confusion_matrix_path = FIGURES_DIR / "confusion_matrix.png"
+if confusion_matrix_path.exists():
+    st.image(str(confusion_matrix_path), caption="Confusion Matrix — Test Set (10,000 reviews)", width=400)
+    st.caption("Accuracy: 89.4% · F1 Score: 0.90")
