@@ -47,6 +47,9 @@ if st.button("Analyze sentiment", type="primary"):
     if not text.strip():
         st.warning("Please enter some text first.")
     else:
+        if len(text.split()) < 10:
+            st.warning("⚠️ For best results, enter at least a few sentences. Short inputs may be unreliable.")
+        
         try:
             label, confidence = predict_sentiment(text)
             st.markdown(sentiment_style(label), unsafe_allow_html=True)
