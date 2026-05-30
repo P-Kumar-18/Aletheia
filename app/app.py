@@ -10,7 +10,7 @@ APP_DIR = Path(__file__).resolve().parent
 MODEL_PATH = APP_DIR.parent / "models" / "sentiment_model.joblib"
 
 
-st.set_page_config(page_title="Sentiment Analyzer", page_icon="💬", layout="centered")
+st.set_page_config(page_title="Aletheia", page_icon="💬", layout="centered")
 
 
 @st.cache_resource
@@ -38,7 +38,7 @@ def sentiment_style(label: str) -> str:
     )
 
 
-st.title("Sentiment Analyzer")
+st.title("Aletheia")
 st.write("Enter a movie review or any text and get a simple positive/negative prediction.")
 
 text = st.text_area("Your text", height=180, placeholder="Type a review here...")

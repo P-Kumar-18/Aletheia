@@ -17,7 +17,7 @@ Aletheia is a sentiment analysis classifier that reads between the lines — tra
 - Accepts raw text and predicts whether the sentiment is Positive or Negative.
 - Returns a confidence percentage and a simple visual indicator.
 
-🔗 **[Live Demo](#)** — *(link added after deployment)*
+🔗 **[Live Demo](https://huggingface.co/spaces/Mystic-0/aletheia)** — *(link added after deployment)*
 
 ## Tech stack
 - Python
