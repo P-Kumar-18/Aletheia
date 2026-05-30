@@ -1,3 +1,14 @@
+---
+title: Aletheia
+emoji: 💬
+colorFrom: red
+colorTo: green
+sdk: streamlit
+sdk_version: "1.45.1"
+app_file: app/app.py
+pinned: false
+---
+
 # Aletheia
 
 Aletheia is a sentiment analysis classifier that reads between the lines — trained on 50,000 movie reviews to tell you exactly how something feels.
