@@ -5,7 +5,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 data/processed/
-models/
 reports/figures/
 
 .streamlit/secrets.toml
